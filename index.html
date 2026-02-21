@@ -33,7 +33,7 @@
         .focus-mode .paragraph.nearby { opacity: 0.4; filter: blur(0.5px); transition: all 0.4s ease; }
         .focus-mode .paragraph.active { opacity: 1; filter: blur(0); transition: all 0.4s ease; }
         .dark { background-color: #121212; color: #e0e0e0; }
-        .paragraph { margin-bottom: 1.5em; min-height: 1.5em; outline: none; }
+        .paragraph { margin-bottom: 1em; min-height: 1.5em; outline: none; }
     </style>
 </head>
 <body>
@@ -183,7 +183,7 @@
                     <div ref=${containerRef} className="h-full overflow-y-auto no-scrollbar pt-[45vh] pb-[55vh] px-6" onScroll=${() => !isTypewriterMode && updateFocus()}>
                         <div className="max-w-2xl mx-auto relative">
                             <div ref=${editorRef} contentEditable suppressContentEditableWarning onInput=${handleInput} onKeyUp=${() => { updateFocus(); if (isTypewriterMode) updateTypewriterScroll(); }} onMouseUp=${updateFocus}
-                                className=${cn("outline-none whitespace-pre-wrap leading-[1.8] min-h-[1em] caret-[#3399ff]", fontFamily === 'serif' && "font-serif", fontFamily === 'sans' && "font-sans", fontFamily === 'mono' && "font-mono", isFocusMode && "focus-mode")}
+                                className=${cn("outline-none whitespace-pre-wrap leading-[1.6] min-h-[1em] caret-[#3399ff]", fontFamily === 'serif' && "font-serif", fontFamily === 'sans' && "font-sans", fontFamily === 'mono' && "font-mono", isFocusMode && "focus-mode")}
                                 style=${{ fontSize: `${fontSize}px` }} spellCheck="false">
                                 <div className="paragraph active">Inizia a scrivere la tua storia...</div>
                             </div>
